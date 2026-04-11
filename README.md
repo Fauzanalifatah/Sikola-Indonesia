@@ -5,5 +5,7 @@ Yang dimana minimnya pengetahuan tentang lomba diluar sana, kami siapkan wadah u
 **Nama Kelompok 6**
 
 **1. Muhammad Fauzan Ali Fatah**
+
 **2. Husnul Nadya F**
+
 **3. M Aril Ardani**
