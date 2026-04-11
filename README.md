@@ -1,4 +1,4 @@
-Project kelompok 6 UI/UX yaitu berjudul tentang "Sikola Indonesia" yang dimana kita menyediakan wadah untuk siswa maupun mahasiswa, terutama mahasiswa timur
+Project kelompok 6 UI/UX yaitu berjudul tentang **"Sikola Indonesia"** yang dimana kita menyediakan wadah untuk siswa maupun mahasiswa, terutama mahasiswa timur
 Yang dimana minimnya pengetahuan tentang lomba diluar sana, kami siapkan wadah untuk mereka agar mereka juga bisa bersaing didunia kompetisi.
 
 
