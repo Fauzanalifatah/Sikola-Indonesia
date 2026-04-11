@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikola Indonesia - Daftar Mentor</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="page-artikel">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/Logo.png" alt="Sikola Indonesia" height="48"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#beranda">Beranda</a></li>
+                <li><a href="index.html#tentang">Tentang</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="testimoni.html">Testimoni</a></li>
+                <li><a href="info lomba.html">Info Lomba</a></li>
+                <li><a href="ecommerce.html" class="active">E-commerce</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="index.html#kontak">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section class="artikel-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>E-commerce with Sikola Indonesia</h1>
+                <p>Temukan mentor terbaik untuk membimbingmu meraih prestasi dan masa depan cemerlang.</p>
+                
+                <!-- Floating Search Box (Synchronized with Info Lomba) -->
+                <div class="search-filter-container">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Cari mentor pilihan anda.." class="search-input">
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-item">
+                            <select name="kategori" class="filter-select">
+                                <option value="">Semua</option>
+                                <option value="desain">Desain</option>
+                                <option value="karya">Karya</option>
+                                <option value="speech">Public Speaking</option>
+                            </select>
+                            <i class="fas fa-chevron-down chevron-icon"></i>
+                        </div>
+                        <div class="filter-item">
+                            <select name="tenggat" class="filter-select">
+                                <option value="">Rating</option>
+                                <option value="tertinggi">Tertinggi</option>
+                                <option value="terpopuler">Terpopuler</option>
+                            </select>
+                            <i class="fas fa-chevron-down chevron-icon"></i>
+                        </div>
+                        <button class="btn-search" id="searchBtn">Cari</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="container">
+        <section class="ebook-list">
+            <h2 class="section-title-left">Daftar Mentor Pilihan</h2>
+            
+            <div id="no-results" class="no-results-container">
+                <div class="no-results-icon">
+                    <i class="fas fa-search-minus"></i>
+                </div>
+                <div class="no-results-text">
+                    <h3>Pencarian tidak ditemukan karena tidak sesuai kategori</h3>
+                    <p>Silakan coba kata kunci lain atau pilih kategori yang sesuai.</p>
+                </div>
+            </div>
+
+            <div class="artikel-grid ebook-grid">
+                <!-- Row 1 -->
+                <!-- Card 1: Lucia Margarita -->
+                <div class="artikel-card" data-category="karya">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Karya</div>
+                        <img src="img/E-commerce/e-commerce 1.jpg" alt="Mentoring Lucia" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <h4>Jasa Mentoring Lomba Business Plan Competition</h4>
+                        <p class="mentor-name">Ahmad Fauzan</p>
+                        <p class="desc">Mau BMC kamu limilmiah mangeri keren & enak untuk dipandang? Hanya di Sikola Indonesia.</p>
+                        <hr class="card-divider">
+                        <div class="btn-group">
+                             <a href="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring%20Lomba%20Business%20Plan.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-primary">Hubungi</a>
+                             <a href="portfolio-mentor 1.html" class="btn-secondary">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="artikel-card" data-category="desain">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Desain</div>
+                        <img src="img/E-commerce/e-commerce 2.jpg" alt="Mentor Desain" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <h4>Jasa Mentoring Desain Poster & UI/UX</h4>
+                        <p class="mentor-name">Lucia Margarita</p>
+                        <p class="desc">Ubah hasi jadi poster daftar isterelik standar PIMNAS. Bikin karya stand out di depan para Juri.</p>
+                        <hr class="card-divider">
+                        <div class="btn-group">
+                             <a href="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-primary">Hubungi</a>
+                             <a href="portfolio-mentor 2.html" class="btn-secondary">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="artikel-card" data-category="speech">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Speech</div>
+                        <img src="img/E-commerce/e-commerce 3.jpg" alt="Mentor Speaking" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <h4>Mentoring Public Speaking & Pitching</h4>
+                        <p class="mentor-name">Sarah Khairunnisa</p>
+                        <p class="desc">Kuasai teknik presentasi yang memukau juri dan audience. Bangun kepercayaan diri dalam menyampaikan ide bisnismu.</p>
+                        <hr class="card-divider">
+                        <div class="btn-group">
+                             <a href="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring%20Public%20Speaking%20%26%20Pitching.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-primary">Hubungi</a>
+                             <a href="portfolio-mentor 3.html" class="btn-secondary">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <!-- Card 4 -->
+                <div class="artikel-card" data-category="karya">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Karya</div>
+                        <img src="img/E-commerce/e-commerce 4.jpg" alt="Mentor Riset" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <h4>Jasa Mentoring Karya Tulis Ilmiah (KTI)</h4>
+                        <p class="mentor-name">Celestia Agrivana</p>
+                        <p class="desc">Ubah hasil penelitianmu jadi karya tulis ilmiah standar PIMNAS. Bikin karyamu stand out di depan para Juri.</p>
+                        <hr class="card-divider">
+                        <div class="btn-group">
+                             <a href="https://wa.me/6285213579208?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring%20Karya%20Tulis%20Ilmiah.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-primary">Hubungi</a>
+                             <a href="portfolio-mentor 4.html" class="btn-secondary">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="artikel-card" data-category="desain">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Desain</div>
+                        <img src="img/E-commerce/e-commerce 5.jpg" alt="Mentor Poster" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <h4>Jasa Mentoring Desain Infografis</h4>
+                        <p class="mentor-name">Dian Sastrowardoyo</p>
+                        <p class="desc">Visualisasikan data kompleks menjadi desain infografis yang informatif dan memikat audience Anda.</p>
+                        <hr class="card-divider">
+                        <div class="btn-group">
+                             <a href="https://wa.me/6285213579208?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring%20Lomba%20Infografis.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-primary">Hubungi</a>
+                             <a href="portfolio-mentor 5.html" class="btn-secondary">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="artikel-card" data-category="speech">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Speech</div>
+                        <img src="img/E-commerce/e-commerce 6.jpg" alt="Mentor Presentasi" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <h4>Mentoring Speech & Storytelling</h4>
+                        <p class="mentor-name">Reza Rahadian</p>
+                        <p class="desc">Pelajari seni bercerita dan teknik vokal untuk menyampaikan pesan yang berkesan dan menginspirasi.</p>
+                        <hr class="card-divider">
+                        <div class="btn-group">
+                             <a href="https://wa.me/6285213579208?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring%20Speech%20%26%20Storytelling.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-primary">Hubungi</a>
+                             <a href="portfolio-mentor 6.html" class="btn-secondary">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <!-- Card 7 -->
+                <div class="artikel-card" data-category="karya">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Karya</div>
+                        <img src="img/E-commerce/e-commerce 7.jpg" alt="Mentor KTI" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <h4>Mentoring Riset & Publikasi Ilmiah</h4>
+                        <p class="mentor-name">Dian Najendra</p>
+                        <p class="desc">Bimbingan olah data dan penulisan jurnal ilmiah untuk publikasi di platform terakreditasi.</p>
+                        <hr class="card-divider">
+                        <div class="btn-group">
+                             <a href="https://wa.me/6282292781754?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring%20Riset%20%26%20Publikasi.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-primary">Hubungi</a>
+                             <a href="portfolio-mentor 7.html" class="btn-secondary">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="artikel-card" data-category="desain">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Desain</div>
+                        <img src="img/E-commerce/e-commerce 8.jpg" alt="Mentor Video" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <h4>Mentoring Video Branding & Editing</h4>
+                        <p class="mentor-name">Mia Mecardo</p>
+                        <p class="desc">Teknik editing video profesional untuk kebutuhan branding, promosi, maupun presentasi kompetisi.</p>
+                        <hr class="card-divider">
+                        <div class="btn-group">
+                             <a href="https://wa.me/6282292781754?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring%20Video%20Branding.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-primary">Hubungi</a>
+                             <a href="portfolio-mentor 8.html" class="btn-secondary">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="artikel-card" data-category="speech">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Speech</div>
+                        <img src="img/E-commerce/e-commerce 9.jpg" alt="Mentor Debat" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <h4>Mentoring Debat & Komunikasi Efektif</h4>
+                        <p class="mentor-name">Dahlan Singh</p>
+                        <p class="desc">Asah kemampuan berpikir kritis dan teknik berdebat untuk memenangkan argumen di setiap sesi.</p>
+                        <hr class="card-divider">
+                        <div class="btn-group">
+                             <a href="https://wa.me/6282292781754?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring%20Debat%20%26%20Komunikasi.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-primary">Hubungi</a>
+                             <a href="portfolio-mentor 9.html" class="btn-secondary">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <div class="footer-logo-section">
+                    <div class="footer-logo-wrapper">
+                        <img src="img/Logo.png" alt="Sikola Indonesia" class="footer-logo-img">
+                    </div>
+                    <div class="footer-title">
+                        <h3>SIKOLA INDONESIA</h3>
+                        <p>To be successful!</p>
+                    </div>
+                </div>
+                <p class="footer-desc">Sikola Indonesia adalah sebuah ruang edukasi dengan penduduk mahasiswa bertumbuh,
+                    membuatmu potensi diri, dan meraih mimpi mereka, kami adakan berikan menjadi pengetahuan kami
+                    berkomitmen untuk memaksimalkan potensi terbaikmu mereka dengan pengetahuan yang dibuthkan.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/sikola.in/" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sikola.indonesia" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/sikola-indonesia/" target="_blank"
+                        class="footer-social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="footer-social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section footer-nav">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="index.html#beranda">Beranda</a></li>
+                    <li><a href="index.html#tentang">Tentang</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                    <li><a href="testimoni.html">Testimoni</a></li>
+                    <li><a href="info lomba.html">Info Lomba</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="index.html#kontak">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h3>Hubungi Kami</h3>
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <i class="fas fa-map-pin"></i>
+                        <p class="label">Lokasi</p>
+                    </div>
+                    <p>Makassar, Indonesia</p>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <i class="fas fa-envelope"></i>
+                        <p class="label">Email</p>
+                    </div>
+                    <p>sikolalindonesia@gmail.com</p>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <i class="fas fa-phone"></i>
+                        <p class="label">Telepon</p>
+                    </div>
+                    <p>+62 821-9941-3871</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sikola Indonesia. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Style Injection (Synchronized with Info Lomba Standard) -->
+    <style>
+        :root {
+            --primary-navy: #0a2351;
+            --accent-gold: #ffe600;
+        }
+
+        .page-artikel .artikel-hero {
+            position: relative;
+            min-height: 500px;
+            background-image: url('img/Background.png');
+            background-color: #4a6fa5;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 40px;
+        }
+
+        .page-artikel .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 35, 81, 0.72) 0%, rgba(15, 45, 100, 0.68) 100%);
+            backdrop-filter: blur(2px);
+        }
+
+        .page-artikel .hero-content {
+            position: relative;
+            z-index: 20;
+            width: 100%;
+            max-width: 1100px; /* Ukuran kompak agar sejajar dengan standar project */
+            margin-top: 100px;
+        }
+
+        .page-artikel .hero-content h1 {
+            color: var(--accent-gold) !important;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+        }
+
+        .page-artikel .hero-content p {
+            font-size: 1.2rem;
+            color: #ffffff !important;
+            margin-bottom: 50px;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
+
+        .search-filter-container {
+            position: relative;
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: 1100px; /* Ukuran yang pas untuk input pencarian */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            transform: translateY(150px);
+            z-index: 100;
+        }
+
+        /* No Results Styles Standardized */
+        .no-results-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: #f8fafc;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 3px solid #e2e8f0;
+            margin: 1rem 0 3rem 0;
+            animation: fadeIn 0.5s ease-out;
+            width: 100%;
+        }
+
+        .no-results-container.active {
+            display: flex !important;
+        }
+
+        .no-results-icon {
+            font-size: 4rem;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+        }
+
+        .no-results-text h3 {
+            color: var(--primary-navy);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .no-results-text p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .search-input-wrapper {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+            font-size: 1.2rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1.2rem 1.2rem 1.2rem 3.5rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .filter-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 180px;
+            gap: 1rem;
+        }
+
+        .filter-item {
+            position: relative;
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            appearance: none;
+            cursor: pointer;
+            background: #fff;
+            font-size: 1rem;
+            color: #64748b;
+        }
+
+        .chevron-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .btn-search {
+            background: var(--primary-navy);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-search:hover {
+            background: #0077c2;
+            transform: scale(1.02);
+        }
+
+        .ebook-list {
+            margin-top: 70px;
+            padding-bottom: 80px;
+        }
+
+        .section-title-left {
+            font-size: 2.22rem;
+            color: var(--primary-navy);
+            font-weight: 800;
+            margin: 0 0 3rem 0 !important;
+            text-align: left !important;
+            display: block !important;
+            width: 100%;
+        }
+
+        .ebook-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px; /* Widened to 1400px to match E-Book page reference */
+            margin: 0 auto 3rem;
+        }
+
+        .artikel-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .artikel-card:hover {
+            box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary-navy);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            z-index: 10;
+            text-transform: uppercase;
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 4; /* Standardized to portrait to match E-Book page */
+            overflow: hidden;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain; /* Matched to E-Book poster style */
+            background-color: #f8fafc;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }.artikel-card:hover .artikel-img {
+            transform: scale(1.05);
+        }
+
+        .artikel-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .btn-group .btn-primary,
+        .btn-group .btn-secondary {
+            flex: 1;
+            padding: 10px 15px !important;
+            font-size: 0.9rem !important;
+            font-weight: 700 !important;
+            min-height: 45px !important;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px !important; /* Standardized capsule look */
+            transition: all 0.3s ease;
+            background: var(--primary-navy) !important;
+            color: #fff !important;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-group .btn-secondary {
+            background: #fff !important;
+            color: var(--primary-navy) !important;
+            border: 2px solid var(--primary-navy) !important;
+        }
+
+        .btn-group .btn-primary:hover { background: #0077c2 !important; box-shadow: 0 5px 15px rgba(10, 35, 81, 0.3); }
+        .btn-group .btn-secondary:hover { background: var(--primary-navy) !important; color: #fff !important; }
+
+        @media (max-width: 1024px) {
+            .ebook-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 650px) {
+            .ebook-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchBtn = document.getElementById('searchBtn');
+            const searchInput = document.querySelector('.search-input');
+            const categorySelect = document.querySelector('select[name="kategori"]');
+            const ratingSelect = document.querySelector('select[name="tenggat"]');
+            const cardsContainer = document.querySelector('.ebook-grid');
+            const noResults = document.getElementById('no-results');
+
+            const filterMentors = () => {
+                const keyword = searchInput.value.toLowerCase();
+                const category = categorySelect.value.toLowerCase();
+                const cards = document.querySelectorAll('.artikel-card');
+                let foundCount = 0;
+
+                cards.forEach(card => {
+                    const title = card.querySelector('h4').textContent.toLowerCase();
+                    const cardCategory = card.getAttribute('data-category').toLowerCase();
+                    
+                    const matchesKeyword = title.includes(keyword);
+                    const matchesCategory = category === "" || cardCategory === category;
+
+                    if (matchesKeyword && matchesCategory) {
+                        card.style.display = 'flex';
+                        foundCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (foundCount > 0) {
+                    noResults.classList.remove('active');
+                } else {
+                    noResults.classList.add('active');
+                }
+
+                // Simple Rating Sort
+                if (ratingSelect.value === 'tertinggi' && foundCount > 0) {
+                    const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
+                    visibleCards.sort((a, b) => {
+                        const rateA = parseFloat(a.querySelector('.card-date').textContent.split('(')[0].trim());
+                        const rateB = parseFloat(b.querySelector('.card-date').textContent.split('(')[0].trim());
+                        return rateB - rateA;
+                    });
+                    visibleCards.forEach(card => cardsContainer.appendChild(card));
+                }
+            };
+
+            searchBtn.addEventListener('click', filterMentors);
+            searchInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') filterMentors(); });
+            categorySelect.addEventListener('change', filterMentors);
+        });
+    </script>
+</body>
+
+</html>

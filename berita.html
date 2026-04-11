@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikola Indonesia - Berita Terbaru</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="page-artikel">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/Logo.png" alt="Sikola Indonesia" height="48"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#beranda">Beranda</a></li>
+                <li><a href="index.html#tentang">Tentang</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="testimoni.html">Testimoni</a></li>
+                <li><a href="info lomba.html">Info Lomba</a></li>
+                <li><a href="ecommerce.html">E-commerce</a></li>
+                <li><a href="berita.html" class="active">Berita</a></li>
+                <li><a href="index.html#kontak">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section class="artikel-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Berita Terbaru</h1>
+                <p>Informasi Terkini Seputar Kegiatan, info magang, info beasiswa yang akan di bagikan oleh Sikola Indonesia</p>
+                
+                <!-- Floating Search Box -->
+                <div class="search-filter-container">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Cari berita terbaru..." class="search-input">
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-item">
+                            <select name="kategori" class="filter-select">
+                                <option value="">Semua</option>
+                                <option value="seminar">Seminar</option>
+                                <option value="workshop">Workshop</option>
+                                <option value="infomagang">Magang</option>
+                                <option value="beasiswa">Beasiswa</option>
+                            </select>
+                            <i class="fas fa-chevron-down chevron-icon"></i>
+                        </div>
+                        <div class="filter-item">
+                            <select name="tenggat" class="filter-select">
+                                <option value="">Tenggat Waktu</option>
+                                <option value="terbaru">Terbaru</option>
+                                <option value="minggu">Minggu Ini</option>
+                            </select>
+                            <i class="fas fa-chevron-down chevron-icon"></i>
+                        </div>
+                        <button class="btn-search" id="searchBtn">Cari</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="container">
+        <section class="ebook-list">
+            <h2 class="section-title-left">Jangan Lewatkan Berita Informasi Penting</h2>
+            
+            <div id="no-results" class="no-results-container" style="display: none;">
+                <div class="no-results-icon">
+                    <i class="fas fa-search-minus"></i>
+                </div>
+                <div class="no-results-text">
+                    <h3>Pencarian tidak ada karena tidak sesuai kategori</h3>
+                    <p>Silakan coba pilih kategori yang lain.</p>
+                </div>
+            </div>
+
+            <div class="artikel-grid ebook-grid">
+                <!-- Seminar 1 -->
+                <div class="artikel-card" data-category="seminar" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Seminar Nasional: Peluang & Tantangan Bisnis di Era Digital</strong><br><br>Seminar Nasional ini menghadirkan para expert dan thought leader dari industri digital, e-commerce, fintech, dan startup ecosystem untuk mendiskusikan peluang dan tantangan berbisnis di era digital.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">SEMINAR</div>
+                        <img src="img/Berita/berita 2.jpg" alt="Seminar Bisnis" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            19 Februari 2026
+                        </div>
+                        <h4>Seminar Nasional "Peluang & Tantangan Bisnis di Era Digital</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Beasiswa 1 -->
+                <div class="artikel-card" data-category="beasiswa" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Beasiswa Unggulan Bank Indonesia 2026:</strong><br><br>Bank Indonesia kembali membuka pendaftaran beasiswa bagi mahasiswa berprestasi yang memiliki dedikasi tinggi untuk membangun negeri. Dapatkan bantuan biaya pendidikan dan program pengembangan diri eksklusif.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">BEASISWA</div>
+                        <img src="img/Berita/berita 1.jpg" alt="Beasiswa BI" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            10 April 2026
+                        </div>
+                        <h4>Beasiswa Unggulan Bank Indonesia 2026 Dibuka</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Workshop 1 -->
+                <div class="artikel-card" data-category="workshop" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Workshop:</strong><br><br>Workshop ini membahas tentang literasi digital dan bagaimana cara menggunakan media sosial dengan bijak oleh Gen-Z.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">WORKSHOP</div>
+                        <img src="img/Berita/berita 3.jpg" alt="Workshop PKM" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            15 Februari 2026
+                        </div>
+                        <h4>Workshop "Literasi Digital masifnya penggunaan media sosial oleh Gen-Z</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Magang 1 -->
+                <div class="artikel-card" data-category="infomagang" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Program Magang Profesional 2026:</strong><br><br>Sikola Indonesia membuka kesempatan magang bagi mahasiswa dan fresh graduate untuk bergabung dalam berbagai proyek nyata dan mendapatkan pengalaman kerja langsung.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">MAGANG</div>
+                        <img src="img/Berita/berita 4.jpg" alt="Info Magang" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            20 Februari 2026
+                        </div>
+                        <h4>Pendaftaran Program Magang Sikola Indonesia Dibuka</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Seminar 2 -->
+                <div class="artikel-card" data-category="seminar" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Seminar Kewirausahaan:</strong><br><br>Seminar ini membahas tentang kewirausahaan dan bagaimana cara membangun jiwa entrepreneur muda yang inovatif dan adaptif di era digital.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">SEMINAR</div>
+                        <img src="img/Berita/berita 5.jpg" alt="Seminar Creative" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            25 Februari 2026
+                        </div>
+                        <h4>Seminar Kewirausahaan "Membangun jiwa entrepreneur muda yang inovatif dan adaptif di era digital" </h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Beasiswa 2 -->
+                <div class="artikel-card" data-category="beasiswa" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Program Beasiswa Prestasi XL Axiata:</strong><br><br>Kesempatan emas bagi mahasiswa untuk mendapatkan dukungan finansial dan mentoring kepemimpinan dari para profesional XL Axiata. Cocok bagi kamu yang ingin mengasah skill digital dan manajemen.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">BEASISWA</div>
+                        <img src="img/Berita/berita 6.jpg" alt="Beasiswa XL" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            15 April 2026
+                        </div>
+                        <h4>Pendaftaran Program Beasiswa Prestasi XL Axiata</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Workshop 2 -->
+                <div class="artikel-card" data-category="workshop" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Workshop Website Development:</strong><br><br>Workshop ini membahas tentang website development dan bagaimana cara membuat website yang menarik dan responsif.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">WORKSHOP</div>
+                        <img src="img/Berita/berita 7.jpg" alt="Workshop KTI" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            2 Maret 2026
+                        </div>
+                        <h4>Workshop Website Development "Pelatihan Pengenalan Fundamental Sistem Web & Desain Halaman Website Berbasis HTML"</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Magang 2 -->
+                <div class="artikel-card" data-category="infomagang" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Magang Marketing:</strong><br><br>Bergabunglah dengan tim Marketing Sikola Indonesia untuk mempelajari strategi pemasaran digital terbaru.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">MAGANG</div>
+                        <img src="img/Berita/berita 8.jpg" alt="Magang Marketing" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            10 Maret 2026
+                        </div>
+                        <h4>Open Recruitment Magang Social Media Specialist</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Seminar 3 -->
+                <div class="artikel-card" data-category="seminar" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Seminar Membangun Bisnis Kreatif:</strong><br><br>Seminar ini membahas tentang bisnis kreatif dan bagaimana cara membangun bisnis kreatif yang inovatif dan adaptif di era digital.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">SEMINAR</div>
+                        <img src="img/Berita/berita 9.jpg" alt="Talkshow" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            15 Maret 2026
+                        </div>
+                        <h4>Seminar "Membangun Bisnis Kreatif"</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Beasiswa 3 -->
+                <div class="artikel-card" data-category="beasiswa" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Beasiswa Djarum Plus:</strong><br><br>Djarum Foundation mencari mahasiswa berprestasi untuk bergabung sebagai Beswan Djarum. Nikmati program Character Building, Leadership Development, dan Networking yang luas.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">BEASISWA</div>
+                        <img src="img/Berita/berita 10.jpg" alt="Beasiswa Djarum" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            20 April 2026
+                        </div>
+                        <h4>Beasiswa Djarum Plus: Raih Kesempatan Pengembangan Menarik</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Workshop 3 -->
+                <div class="artikel-card" data-category="workshop" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Workshop Kewirausahaan:</strong><br><br>Workshop ini membahas tentang kewirausahaan dan bagaimana cara membangun bisnis yang inovatif dan adaptif di era digital.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">WORKSHOP</div>
+                        <img src="img/Berita/berita 11.jpg" alt="Workshop Business" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            20 Maret 2026
+                        </div>
+                        <h4>Workshop Kewirausahaan "Innovation, creativity, and technology: Pillars of entrepreneurial succes in the creative"</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Magang 3 -->
+                <div class="artikel-card" data-category="infomagang" data-registrasi="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih."
+                    data-description="<strong>Magang UI/UX:</strong><br><br>Kesempatan bagi desainer muda untuk merancang antarmuka platform edukasi masa depan bersama Sikola Indonesia.">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">MAGANG</div>
+                        <img src="img/Berita/berita 12.jpg" alt="Magang UI/UX" class="artikel-img card-img-poster">
+                    </div>
+                    <div class="artikel-body">
+                        <div class="card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            1 April 2026
+                        </div>
+                        <h4>Internship Opportunity: UI/UX Designer for Web Edukasi</h4>
+                        <hr class="card-divider">
+                        <a href="javascript:void(0)" class="artikel-link btn-detail">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <div class="footer-logo-section">
+                    <div class="footer-logo-wrapper">
+                        <img src="img/Logo.png" alt="Sikola Indonesia" class="footer-logo-img">
+                    </div>
+                    <div class="footer-title">
+                        <h3>SIKOLA INDONESIA</h3>
+                        <p>To be successful!</p>
+                    </div>
+                </div>
+                <p class="footer-desc">Sikola Indonesia adalah sebuah ruang edukasi dengan penduduk mahasiswa bertumbuh,
+                    membuatmu potensi diri, dan meraih mimpi mereka, kami adakan berikan menjadi pengetahuan kami
+                    berkomitmen untuk memaksimalkan potensi terbaikmu mereka dengan pengetahuan yang dibuthkan.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/sikola.in/" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sikola.indonesia" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/sikola-indonesia/" target="_blank"
+                        class="footer-social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="footer-social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section footer-nav">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="index.html#beranda">Beranda</a></li>
+                    <li><a href="index.html#tentang">Tentang</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                    <li><a href="index.html#testimoni">Testimoni</a></li>
+                    <li><a href="index.html#infolmba">Info Lomba</a></li>
+                    <li><a href="index.html#ecommerce">E-commerce</a></li>
+                    <li><a href="index.html#berita">Berita</a></li>
+                    <li><a href="index.html#kontak">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h3>Hubungi Kami</h3>
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <i class="fas fa-map-pin"></i>
+                        <p class="label">Lokasi</p>
+                    </div>
+                    <p>Makassar, Indonesia</p>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <i class="fas fa-envelope"></i>
+                        <p class="label">Email</p>
+                    </div>
+                    <p>sikolalindonesia@gmail.com</p>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <i class="fas fa-phone"></i>
+                        <p class="label">Telepon</p>
+                    </div>
+                    <p>+62 821-9941-3871</p>
+                </div>
+                <h3>Newsletter</h3>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email anda" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sikola Indonesia. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Modal untuk Baca Selengkapnya -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="Detail" class="modal-img">
+            </div>
+            <div class="modal-text">
+                <h2 id="modalTitle">Detail</h2>
+                <p id="modalDate" class="modal-date"></p>
+                <div class="modal-body" id="modalBody">
+                    <!-- Konten akan diisi dengan JavaScript -->
+                </div>
+                <!-- Tombol Registrasi untuk Berita -->
+                <div id="modalRegWrapper" class="modal-reg-wrapper" style="display:none;">
+                    <button id="modalRegBtn" class="btn-registrasi" onclick="window.open(this.dataset.url,'_blank')" data-url="">
+                        <i class="fas fa-user-plus"></i> Link Pendaftaran
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script untuk Modal -->
+    <script>
+        const modal = document.getElementById('detailModal');
+        const detailButtons = document.querySelectorAll('.btn-detail');
+
+        detailButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const card = this.closest('[data-description]');
+                if (card) {
+                    const description = card.getAttribute('data-description');
+                    const title = card.querySelector('h4') ? card.querySelector('h4').textContent : 'Detail';
+                    const image = card.querySelector('.card-img-poster') ? card.querySelector('.card-img-poster').src : '';
+                    
+                    document.getElementById('modalTitle').textContent = title;
+                    document.getElementById('modalBody').innerHTML = description;
+                    document.getElementById('modalImage').src = image;
+                    document.getElementById('modalImage').alt = title;
+
+
+
+                    // Tombol Registrasi - hanya tampil jika card punya data-registrasi
+                    const regUrl = card.getAttribute('data-registrasi');
+                    const regWrapper = document.getElementById('modalRegWrapper');
+                    const regBtn = document.getElementById('modalRegBtn');
+                    if (regUrl) {
+                        regBtn.dataset.url = regUrl;
+                        regWrapper.style.display = 'flex';
+                    } else {
+                        regBtn.dataset.url = '';
+                        regWrapper.style.display = 'none';
+                    }
+
+                    openModal();
+                }
+            });
+        });
+
+        function openModal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+        // Script Pencarian Lama Telah Dihapus (Dibersihkan)
+    </script>
+
+    <!-- Custom Style Injection for specific Artikel Page layout -->
+    <style>
+        :root {
+            --primary-navy: #0a2351;
+            --accent-gold: #ffe600;
+            --text-light: #64748b;
+        }
+
+        .page-artikel .artikel-hero {
+            position: relative;
+            min-height: 500px;
+            background-image: url('img/Background.png');
+            background-color: #4a6fa5;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 40px;
+        }
+
+        .page-artikel .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 35, 81, 0.72) 0%, rgba(15, 45, 100, 0.68) 100%);
+            backdrop-filter: blur(2px);
+        }
+
+        .page-artikel .hero-content {
+            position: relative;
+            z-index: 20;
+            width: 100%;
+            max-width: 1100px; /* Diperkecil kembali agar seimbang seperti Testimoni */
+            margin-top: 100px; /* Diturunkan agar lebih seimbang */
+        }
+
+        .page-artikel .hero-content h1 {
+            color: var(--accent-gold) !important;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+        }
+
+        .page-artikel .hero-content p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #ffffff !important;
+            margin-bottom: 50px;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
+
+        .search-filter-container {
+            position: relative;
+            background: #fff;
+            padding: 3rem; 
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+            width: 100%;
+            max-width: 1100px; /* Sesuaikan ukuran dengan Testimoni agar tidak terlalu melebar */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            transform: translateY(150px);
+            z-index: 100;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            overflow: visible; /* Penting agar kotak yang melampaui batas tidak terpotong */
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+            font-size: 1.2rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1.2rem 1.2rem 1.2rem 3.5rem; /* Input dipertebal sedikit */
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-navy);
+            box-shadow: 0 0 0 3px rgba(10, 35, 81, 0.05);
+        }
+
+        .filter-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 180px;
+            gap: 1rem;
+        }
+
+        .filter-item {
+            position: relative;
+        }
+
+        .container-custom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+        }
+
+        .filter-select {
+            width: 100%;
+            appearance: none;
+            padding: 0.8rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            color: #64748b;
+            cursor: pointer;
+            outline: none;
+            background: #fff;
+        }
+
+        .chevron-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .btn-search {
+            background: var(--primary-navy);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .btn-search:hover {
+            background: #0077c2;
+            transform: scale(1.02);
+        }
+
+        /* Card Section Styles */
+        .ebook-list {
+            margin-top: 70px;
+            padding-bottom: 80px;
+        }
+
+        .section-title-left {
+            font-size: 2.22rem;
+            color: var(--primary-navy);
+            font-weight: 800;
+            margin: 0 0 3rem 0 !important;
+            text-align: left !important;
+            display: block !important;
+            width: 100%;
+        }
+
+        .ebook-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px; /* Diperbesar agar tidak banyak space kosong */
+            margin: 0 auto 3rem;
+        }
+
+        .section-header-center {
+            text-align: center;
+            margin: 40px 0 50px;
+        }
+
+        .section-header-center h2 {
+            font-size: 3rem;
+            color: var(--primary-navy);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-header-center .subtitle {
+            font-size: 1.15rem;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Pill Tabs Styles */
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #fff;
+            color: var(--primary-navy);
+            border: 2px solid var(--primary-navy);
+            min-width: 120px;
+        }
+
+        .tab-btn.active {
+            background: var(--primary-navy);
+            color: #fff;
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 35, 81, 0.15);
+        }
+
+        .artikel-card {
+            background: #fff;
+            border-radius: 20px; /* Sudut lebih melengkung sesuai screenshot */
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #f1f5f9;
+        }
+
+        .artikel-card:hover {
+            box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+        }
+
+        .artikel-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .card-date {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #007bff;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .card-date i {
+            font-size: 0.9rem;
+        }
+
+        .artikel-body h4 {
+            font-size: 1.25rem;
+            color: var(--primary-navy);
+            line-height: 1.5;
+            margin-bottom: auto;
+            font-weight: 700;
+        }
+
+        .card-divider {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 4; /* Portrait agar poster terlihat utuh seperti Info Lomba */
+            overflow: hidden;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain; /* Agar gambar poster tidak terpotong */
+            background-color: #f8fafc; /* Latar belakang netral */
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .artikel-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute !important;
+            top: 20px !important;
+            left: 20px !important;
+            background: var(--primary-navy) !important;
+            color: #fff !important;
+            padding: 6px 16px !important;
+            border-radius: 8px !important;
+            font-size: 0.7rem !important;
+            font-weight: 800 !important;
+            z-index: 10 !important;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+        }
+
+        /* Button Style - Synchronized with Info Lomba */
+        .artikel-card .artikel-link,
+        .artikel-card .btn-detail {
+            display: block !important;
+            width: 100% !important;
+            margin: 0.5rem auto 0 !important;
+            background: var(--primary-navy) !important;
+            color: #ffffff !important;
+            text-decoration: none !important;
+            padding: 12px 30px !important;
+            border-radius: 50px !important;
+            font-weight: 700 !important;
+            font-size: 0.95rem !important;
+            transition: all 0.3s ease !important;
+            text-align: center !important;
+            box-sizing: border-box !important;
+            border: none !important;
+        }
+
+        .artikel-card .artikel-link:hover,
+        .artikel-card .btn-detail:hover {
+            background: #1a3a7a !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 5px 15px rgba(10, 35, 81, 0.3) !important;
+            color: #ffffff !important;
+        }
+
+        @media (max-width: 1024px) {
+            .ebook-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .ebook-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-artikel .hero-content h1 {
+                font-size: 2.22rem;
+            }
+        }
+
+        /* No Results Styles */
+        .no-results-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: #f8fafc;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 3px solid #e2e8f0;
+            margin: 1rem 0 3rem 0;
+            animation: fadeIn 0.5s ease-out;
+            width: 100%;
+        }
+
+        .no-results-container.active {
+            display: flex !important;
+        }
+
+        .no-results-icon {
+            font-size: 4rem;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+        }
+
+        .no-results-text h3 {
+            color: var(--primary-navy);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .no-results-text p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.querySelector('.search-input');
+            const kategoriSelect = document.querySelector('select[name="kategori"]');
+            const searchBtn = document.getElementById('searchBtn');
+            const cards = document.querySelectorAll('.artikel-card');
+            const noResults = document.getElementById('no-results');
+
+            function performSearch() {
+                const keyword = searchInput.value.toLowerCase().trim();
+                const selectedKategori = kategoriSelect.value.toLowerCase();
+                let foundCount = 0;
+
+                cards.forEach(card => {
+                    const titleEl = card.querySelector('h4');
+                    const title = titleEl ? titleEl.textContent.toLowerCase() : "";
+                    const description = (card.getAttribute('data-description') || "").toLowerCase();
+                    const cardKategori = (card.getAttribute('data-category') || "").toLowerCase();
+
+                    const matchesKategori = (selectedKategori === "" || cardKategori === selectedKategori);
+                    const matchesKeyword = (keyword === "" || title.includes(keyword) || description.includes(keyword));
+
+                    if (matchesKategori && matchesKeyword) {
+                        card.style.display = 'flex';
+                        foundCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (foundCount === 0) {
+                    noResults.style.display = 'flex';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+
+            if (searchBtn) {
+                searchBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    performSearch();
+                });
+            }
+
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+
+            kategoriSelect.addEventListener('change', performSearch);
+
+            // Modal functionality
+            const detailButtons = document.querySelectorAll('.btn-detail');
+            detailButtons.forEach(btn => {
+                btn.onclick = function(e) {
+                    const card = this.closest('.artikel-card');
+                    const title = card.querySelector('h4').textContent;
+                    const img = card.querySelector('img').src;
+                    const desc = card.getAttribute('data-description');
+
+                    document.getElementById('modalTitle').textContent = title;
+                    document.getElementById('modalImage').src = img;
+                    document.getElementById('modalBody').innerHTML = desc;
+
+                    // Tombol Registrasi - hanya tampil jika card punya data-registrasi
+                    const regUrl = card.getAttribute('data-registrasi');
+                    const regWrapper = document.getElementById('modalRegWrapper');
+                    const regBtn = document.getElementById('modalRegBtn');
+                    if (regUrl) {
+                        regBtn.dataset.url = regUrl;
+                        regWrapper.style.display = 'flex';
+                    } else {
+                        regBtn.dataset.url = '';
+                        regWrapper.style.display = 'none';
+                    }
+
+                    openModal();
+                };
+            });
+        });
+    </script>
+</body>
+
+</html>

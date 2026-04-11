@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Mentor - Lucia Margarita | Sikola Indonesia</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #0a2351;
+            --accent-gold: #ffcc00;
+            --text-light: #64748b;
+        }
+
+        .portfolio-hero {
+            position: relative;
+            background-image: url('img/Background.png');
+            background-size: cover;
+            background-position: center 15%; /* Moves focus higher up */
+            padding: 1.5rem 0 3.5rem !important; /* Extra bottom padding for overlap */
+            color: #fff;
+            overflow: hidden;
+            display: block !important;
+            text-align: left !important;
+            min-height: auto !important; /* Override global 100vh */
+        }
+
+        .portfolio-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(10, 35, 81, 0.85) 0%, rgba(10, 35, 81, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .portfolio-hero .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto !important;
+            padding: 0 1.5rem !important;
+            text-align: left !important;
+        }
+
+        .portfolio-hero h1 {
+            color: var(--accent-gold) !important;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+            margin-bottom: 5px; /* Tight margin to breadcrumbs */
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            text-align: left !important;
+        }
+        
+        .breadcrumbs {
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: left !important;
+            margin: 0;
+        }
+
+        .portfolio-container {
+            max-width: 1400px;
+            margin: 2rem auto 4rem; /* Lowered as requested */
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 480px; /* Adjusted to match Figma proportions */
+            gap: 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Left Column Styles */
+        .mentor-left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .mentor-img-frame-new {
+            width: 100%;
+            aspect-ratio: 3 / 2; /* more landscape to pull content up */
+            max-height: 320px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .mentor-img-frame-new img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%; /* Slightly focus more on the face */
+            display: block;
+        }
+
+        .history-section h3 {
+            color: var(--primary-navy);
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+
+        .history-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .history-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 1.2rem;
+            color: #334155;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .history-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            background: #1e293b;
+            border-radius: 50%;
+        }
+
+        /* Right Column Styles */
+        .mentor-right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .mentor-header-info h2 {
+            font-size: 3rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .mentor-role {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .mentor-rating {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .stars { color: #ffcc00; font-size: 1.5rem; }
+        .rating-count { color: #64748b; font-size: 1rem; }
+
+        /* Figma Booking Card Style */
+        .booking-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+            border: 1px solid #f1f5f9;
+        }
+
+        .booking-card h3 {
+            color: #000;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .booking-inputs-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px; /* Tightened gap */
+            margin-bottom: 1.2rem;
+        }
+
+        .input-box {
+            background: #fff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .input-box:hover { border-color: var(--primary-navy); }
+
+        .input-box i { color: #cbd5e1; font-size: 1.1rem; }
+        
+        .booking-select, .booking-date-input {
+            border: none;
+            background: transparent;
+            width: 100%;
+            font-size: 1rem;
+            color: #000;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .price-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .price-item {
+            padding: 0.9rem 1.2rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #000;
+            background: #fff;
+        }
+
+        .price-item:hover { border-color: var(--primary-navy); }
+
+        .price-item.active {
+            background: #f8fafc;
+            color: var(--primary-navy);
+            border-color: var(--primary-navy);
+            border-width: 2px;
+            font-weight: 700;
+        }
+
+        .booking-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-booking {
+            background: #ffc107;
+            color: #000;
+            text-decoration: none;
+            text-align: center;
+            padding: 1.2rem;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-chat-mentor {
+            background: var(--primary-navy);
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            padding: 1.2rem;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-booking:hover { filter: brightness(1.05); }
+        .btn-chat-mentor:hover { background: #1a3a7a; }
+
+        /* Tab Section Refinement */
+        .detail-pengalaman {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .detail-pengalaman h2 {
+            color: var(--primary-navy);
+            margin-bottom: 2.5rem;
+            font-weight: 800;
+            font-size: 2.5rem;
+            text-align: left !important;
+        }
+
+        .experience-unified-box {
+            background: #fff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 0 20px 20px 20px; /* Folder style */
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .experience-tabs-container {
+            display: flex;
+            gap: 0;
+            background: transparent;
+            margin-bottom: -1.5px; /* precisely overlaps the box border below */
+            position: relative;
+            z-index: 5;
+            border-bottom: 2px solid #e2e8f0; /* The requested 'divider' */
+        }
+
+        .exp-tab {
+            flex: 1; /* Stretch to fill full width */
+            padding: 1.2rem 1rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1.5px solid #e2e8f0;
+            border-bottom: none;
+            background: #fff;
+            border-radius: 15px 15px 0 0;
+            margin-right: -1.5px; /* merge borders with adjacent tabs */
+            position: relative;
+        }
+
+        .exp-tab:hover { background: #f8fafc; z-index: 2; }
+
+        .exp-tab.active {
+            background: var(--primary-navy);
+            color: #fff;
+            border-color: var(--primary-navy);
+            z-index: 3;
+        }
+
+        .exp-grid {
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .exp-card {
+            background: #fff;
+            border: 1.5px solid #f1f5f9;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+
+        .exp-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            border-color: #e2e8f0;
+        }
+
+        .exp-card-img {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .exp-card-img img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.6s ease;
+        }
+
+        .exp-card-body {
+            padding: 1.5rem;
+        }
+
+        .exp-card-body h4 { 
+            color: #000; 
+            margin-bottom: 0.8rem; 
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .exp-card-body p { 
+            color: #475569; 
+            font-size: 1rem; 
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .portfolio-container { grid-template-columns: 1fr; margin-top: 2rem; }
+            .booking-card { position: static; }
+            .exp-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .mentor-main-info { flex-direction: column; text-align: center; }
+            .history-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/Logo.png" alt="Sikola Indonesia" height="48"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#beranda">Beranda</a></li>
+                <li><a href="index.html#tentang">Tentang</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="testimoni.html">Testimoni</a></li>
+                <li><a href="info lomba.html">Info Lomba</a></li>
+                <li><a href="ecommerce.html">E-commerce</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="index.html#kontak">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section class="portfolio-hero">
+            <div class="container">
+                <h1>Portofolio Mentor</h1>
+                <p class="breadcrumbs">Beranda / Detail Mentoring / Ahmad Fauzan</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div class="portfolio-container">
+            <!-- Left Side: Profile Image & History -->
+            <div class="mentor-left-column">
+                <div class="mentor-img-frame-new">
+                    <img src="img/E-commerce/e-commerce 1.jpg" alt="Ahmad Fauzan">
+                </div>
+                
+                <div class="history-section">
+                    <h3>Riwayat & Pengalaman</h3>
+                    <ul class="history-list">
+                        <li><strong>Alumni:</strong> Universitas Gadjah Mada (UGM)</li>
+                        <li><strong>Pengalaman:</strong> 7+ Tahun Mentor & Konsultan Program Akselerasi Startup.</li>
+                        <li><strong>Prestasi:</strong> Best Business Model Canvas (BMC) Coach pada National Business Competition.</li>
+                        <li><strong>Keahlian:</strong> Speaker di berbagai Seminar Nasional dan Workshop Kewirausahaan tingkat Universitas.</li>
+                        <li><strong>Sertifikasi:</strong> Strategic Planning Specialist (SPS) Certified.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Info & Booking -->
+            <div class="mentor-right-column">
+                <div class="mentor-header-info">
+                    <h2>Ahmad Fauzan</h2>
+                    <p class="mentor-role">Mentor Beasiswa & Studi Lanjut</p>
+                    <div class="mentor-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(120 Ulasan)</span>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <h3>Booking Mentor</h3>
+                    <div class="booking-inputs-row">
+                        <div class="input-box">
+                            <i class="far fa-clock"></i>
+                            <select id="bookingDuration" class="booking-select">
+                                <option value="1">Jam</option>
+                                <option value="1">1 Jam</option>
+                                <option value="2">2 Jam</option>
+                                <option value="3">3 Jam</option>
+                            </select>
+                        </div>
+                        <div class="input-box" style="position: relative;">
+                            <i class="far fa-calendar-alt"></i>
+                            <input type="text" placeholder="Tanggal" id="bookingDateDisplay" class="booking-date-input" readonly>
+                            <i class="fas fa-chevron-down" style="font-size: 0.8rem; color: #64748b;"></i>
+                            <!-- Hidden but positioned date input for better picker anchoring -->
+                            <input type="date" id="bookingDate" style="position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%;">
+                        </div>
+                    </div>
+                    
+                    <div class="price-options" id="priceOptions">
+                        <div class="price-item active" data-duration="1" data-price="50.000">Rp. 50.000</div>
+                        <div class="price-item" data-duration="2" data-price="100.000">Rp. 100.000</div>
+                        <div class="price-item" data-duration="3" data-price="150.000">Rp. 150.000</div>
+                    </div>
+
+                    <div class="booking-actions">
+                        <a href="#" class="btn-booking" id="btnBooking">Booking Mentor</a>
+                        <a href="https://wa.me/6282399213651?text=Halo%20Sikola%20Indonesia%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20mentoring.%20Mohon%20informasi%20lebih%20lanjut%20mengenai%20prosedurnya.%20Terima%20kasih." target="_blank" class="btn-chat-mentor">Chat Dengan Mentor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Tabs Section -->
+        <section class="detail-pengalaman">
+            <h2>Detail Pengalaman</h2>
+            <div class="experience-unified-box">
+                <div class="experience-tabs-container">
+                <div class="exp-tab active" data-tab="pengalaman">Pengalaman</div>
+                <div class="exp-tab" data-tab="pencapaian">Pencapaian</div>
+                <div class="exp-tab" data-tab="media">Media</div>
+                <div class="exp-tab" data-tab="testimoni">Testimoni</div>
+            </div>
+
+            <div class="exp-grid" id="expGrid">
+                <!-- Content will be handled by simple JS below -->
+                <div class="exp-card">
+                    <div class="exp-card-img">
+                        <img src="img/Berita/berita 3.jpg" alt="Jam Terbang Tinggi">
+                    </div>
+                    <div class="exp-card-body">
+                        <h4>Jam terbang tinggi</h4>
+                        <p>Udah 5 tahun lebih nemenin teman-teman mahasiswa buat naklukin dokumen beasiswa luar negeri dan lokal.</p>
+                    </div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-card-img">
+                        <img src="img/Testimoni/testimoni 1.jpg" alt="Langganan Podium">
+                    </div>
+                    <div class="exp-card-body">
+                        <h4>Langganan Podium</h4>
+                        <p>Pernah sabet Juara 2 National Essay Competition dan sukses bantu 100+ mentee masuk kampus Top 100 dunia.</p>
+                    </div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-card-img">
+                        <img src="img/Berita/berita 2.jpg" alt="Senjata Rahasia">
+                    </div>
+                    <div class="exp-card-body">
+                        <h4>Senjata Rahasia</h4>
+                        <p>Jago banget bedah Personal Statement, strategi dapet LoA, sampai simulasi interview biar gak grogi.</p>
+                    </div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-card-img">
+                        <img src="img/Testimoni/testimoni 3.jpg" alt="Lisensi Resmi">
+                    </div>
+                    <div class="exp-card-body">
+                        <h4>Lisensi Resmi</h4>
+                        <p>Pegang sertifikat Certified Scholarship Coach serta instruktur IELTS profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <div class="footer-logo-section">
+                    <div class="footer-logo-wrapper">
+                        <img src="img/Logo.png" alt="Sikola Indonesia" class="footer-logo-img">
+                    </div>
+                    <div class="footer-title">
+                        <h3>SIKOLA INDONESIA</h3>
+                        <p>To be successful!</p>
+                    </div>
+                </div>
+                <p class="footer-desc">Sikola Indonesia adalah sebuah ruang edukasi dengan penduduk mahasiswa bertumbuh,
+                    membuatmu potensi diri, dan meraih mimpi mereka, kami adakan berikan menjadi pengetahuan kami
+                    berkomitmen untuk memaksimalkan potensi terbaikmu mereka dengan pengetahuan yang dibuthkan.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/sikola.in/" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sikola.indonesia" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/sikola-indonesia/" target="_blank"
+                        class="footer-social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/6282399213651" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section footer-nav">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="index.html#beranda">Beranda</a></li>
+                    <li><a href="index.html#tentang">Tentang</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                    <li><a href="testimoni.html">Testimoni</a></li>
+                    <li><a href="info lomba.html">Info Lomba</a></li>
+                    <li><a href="ecommerce.html">E-Commerce</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="index.html#kontak">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h3>Hubungi Kami</h3>
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <i class="fas fa-map-pin"></i>
+                        <p class="label">Lokasi</p>
+                    </div>
+                    <p>Makassar, Indonesia</p>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <i class="fas fa-envelope"></i>
+                        <p class="label">Email</p>
+                    </div>
+                    <p>sikolalindonesia@gmail.com</p>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <i class="fas fa-phone"></i>
+                        <p class="label">Telepon</p>
+                    </div>
+                    <p>+62 821-9941-3871</p>
+                </div>
+                <h3>Newsletter</h3>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email anda" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sikola Indonesia. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Tab Switching for Detail Pengalaman ---
+        const tabs = document.querySelectorAll('.exp-tab');
+        const grid = document.getElementById('expGrid');
+
+        const experiences = {
+            pengalaman: [
+                { title: 'Jam terbang tinggi', desc: 'Udah 5 tahun lebih nemenin teman-teman mahasiswa buat naklukin dokumen beasiswa luar negeri dan lokal.', img: 'img/Berita/berita 3.jpg' },
+                { title: 'Langganan Podium', desc: 'Pernah sabet Juara 2 National Essay Competition dan sukses bantu 100+ mentee masuk kampus Top 100 dunia.', img: 'img/Testimoni/testimoni 1.jpg' },
+                { title: 'Senjata Rahasia', desc: 'Jago banget bedah Personal Statement, strategi dapet LoA, sampai simulasi interview biar gak grogi.', img: 'img/Berita/berita 2.jpg' },
+                { title: 'Lisensi Resmi', desc: 'Pegang sertifikat Certified Scholarship Coach serta instruktur IELTS profesional.', img: 'img/Testimoni/testimoni 3.jpg' },
+                { title: 'Mentor Berpengalaman', desc: 'Telah membimbing ribuan mahasiswa dalam mencapai target skor TOEFL/IELTS.', img: 'img/Testimoni/testimoni 2.jpg' },
+                { title: 'Keahlian Khusus', desc: 'Spesialis dalam penulisan Motivation Letter dan Study Plan yang memikat.', img: 'img/Berita/berita 1.jpg' }
+            ],
+            pencapaian: [
+                { title: 'Best Mentor 2025', desc: 'Meraih penghargaan sebagai mentor terbaik dalam ajang Education Awards 2025.', img: 'img/Testimoni/testimoni 2.jpg' },
+                { title: '100% Success Rate', desc: 'Mentee binaan berhasil lolos ke tahap interview di 5 beasiswa prestisius berbeda.', img: 'img/Testimoni/testimoni 1.jpg' },
+                { title: 'Speaker International', desc: 'Diundang sebagai pembicara utama di webinar pendidikan tingkat Asia Tenggara.', img: 'img/Berita/berita 3.jpg' },
+                { title: 'Penulis Buku Edukasi', desc: 'Menulis buku best-seller tentang strategi meraih beasiswa kuliah di luar negeri.', img: 'img/Berita/berita 2.jpg' },
+                { title: 'Top Ranked Coach', desc: 'Tercatat sebagai pelatih dengan rating tertinggi di platform edukasi nasional.', img: 'img/Testimoni/testimoni 3.jpg' },
+                { title: 'Global impact', desc: 'Sukses membantu mentee mendapatkan dana hibah riset internasional.', img: 'img/Testimoni/testimoni 2.jpg' }
+            ],
+            media: [
+                { title: 'Talkshow TV', desc: 'Diundang sebagai pakar pendidikan dalam talkshow "Masa Depan Cerah" di stasiun TV nasional.', img: 'img/Berita/berita 2.jpg' },
+                { title: 'Podcast Edukasi', desc: 'Membahas tips lolos beasiswa LPDP di Podcast Pendidikan Indonesia.', img: 'img/Berita/berita 3.jpg' },
+                { title: 'Webinar Series', desc: 'Host rutin untuk seri webinar "Reach Your Dreams" yang diikuti ribuan peserta.', img: 'img/Berita/berita 1.jpg' },
+                { title: 'Feature Article', desc: 'Profil mentor dimuat di majalah Forbes Indonesia kategori Young Achievers.', img: 'img/Testimoni/testimoni 1.jpg' },
+                { title: 'Youtube Collab', desc: 'Berkolaborasi dengan influencer pendidikan untuk konten strategi kuliah gratis.', img: 'img/Testimoni/testimoni 3.jpg' },
+                { title: 'Radio Interview', desc: 'Berbagi pengalaman inspiratif di stasiun radio populer Makassar.', img: 'img/Berita/berita 2.jpg' }
+            ],
+            testimoni: [
+                { title: 'Andi Pradana', desc: "Berkat bimbingan kak Lucia, saya berhasil lolos beasiswa Fulbright ke Amerika!", img: 'img/Testimoni/testimoni 3.jpg' },
+                { title: 'Siti Aminah', desc: "Strategi bedah essay-nya juara banget. Langsung dapet LoA dari Oxford!", img: 'img/Testimoni/testimoni 1.jpg' },
+                { title: 'Rendi Wijaya', desc: "Gak sangka bisa dapet beasiswa GKS ke Korea. Terima kasih banyak bimbingannya kak!", img: 'img/Testimoni/testimoni 2.jpg' },
+                { title: 'Maya Sari', desc: "Sangat detail dalam memberikan feedback. Essay saya jadi jauh lebih berbobot.", img: 'img/Testimoni/testimoni 3.jpg' },
+                { title: 'Budi Santoso', desc: "Mentor yang sangat suportif. Motivasi saya sangat terbantu selama proses aplikasi.", img: 'img/Testimoni/testimoni 1.jpg' },
+                { title: 'Lina Marlina', desc: "Sesi interview simulation-nya sangat membantu mental saya menghadapi interviewer.", img: 'img/Testimoni/testimoni 2.jpg' }
+            ]
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const category = tab.dataset.tab;
+                const items = experiences[category].slice(0, 4); // Limit to 4 items for 2x2 grid
+                grid.innerHTML = items.map(item => `
+                    <div class="exp-card">
+                        <div class="exp-card-img">
+                            <img src="${item.img}" alt="${item.title}">
+                        </div>
+                        <div class="exp-card-body">
+                            <h4>${item.title}</h4>
+                            <p>${item.desc}</p>
+                        </div>
+                    </div>
+                `).join('');
+            });
+        });
+
+        // --- Booking Card Interaction Logic ---
+        const durationSelect = document.getElementById('bookingDuration');
+        const dateInput = document.getElementById('bookingDate');
+        const dateDisplay = document.getElementById('bookingDateDisplay');
+        const priceItems = document.querySelectorAll('#priceOptions .price-item');
+        const btnBooking = document.getElementById('btnBooking');
+
+        // Handle date selection update (native element now captures the click)
+        dateInput.addEventListener('click', () => {
+            if (dateInput.showPicker) {
+                dateInput.showPicker();
+            }
+        });
+
+        dateInput.addEventListener('change', (e) => {
+            if(e.target.value) {
+                const d = new Date(e.target.value);
+                const options = { day: '2-digit', month: 'short', year: 'numeric' };
+                dateDisplay.value = d.toLocaleDateString('id-ID', options);
+                dateDisplay.style.color = "#000";
+            }
+        });
+
+        const updatePriceSelection = (duration) => {
+            priceItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.dataset.duration === duration) {
+                    item.classList.add('active');
+                }
+            });
+        };
+
+        durationSelect.addEventListener('change', (e) => {
+            updatePriceSelection(e.target.value);
+        });
+
+        priceItems.forEach(item => {
+            item.addEventListener('click', () => {
+                durationSelect.value = item.dataset.duration;
+                updatePriceSelection(item.dataset.duration);
+            });
+        });
+
+        // WhatsApp Handler
+        btnBooking.addEventListener('click', (e) => {
+            e.preventDefault();
+            const mentorName = "Lucia Margarita";
+            const duration = durationSelect.value;
+            const date = dateInput.value;
+            const activePrice = document.querySelector('#priceOptions .price-item.active').dataset.price;
+
+            if (!date) {
+                alert("Silakan pilih tanggal booking terlebih dahulu.");
+                return;
+            }
+
+            const formattedDate = new Date(date).toLocaleDateString('id-ID', { 
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
+            });
+
+            const message = `Halo Sikola Indonesia, saya tertarik booking mentor *${mentorName}*.\n\n` +
+                          `• Jadwal: ${formattedDate}\n` +
+                          `• Durasi: ${duration} Jam\n` +
+                          `• Total Biaya: Rp. ${activePrice}\n\n` +
+                          `Mohon konfirmasinya. Terima kasih!`;
+
+            window.open(`https://wa.me/6282399213651?text=${encodeURIComponent(message)}`, '_blank');
+        });
+    </script>
+</body>
+
+</html>
