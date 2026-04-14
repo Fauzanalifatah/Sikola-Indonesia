@@ -436,7 +436,7 @@ body {
 
 section > .btn-primary {
     display: block;
-    margin: 2.5rem auto 3rem;
+    margin: 1.5rem auto 0.1rem;
     padding: 1rem 3rem;
     width: fit-content;
     font-size: 1.05rem;
@@ -529,13 +529,25 @@ section {
     overflow: visible;
 }
 
-section h2 {
+.home-page section:not(.hero) h2 {
     text-align: center;
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 800;
     letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.home-page section:not(.hero) h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
 }
 
 .subtitle {
@@ -718,7 +730,7 @@ section h2 {
     gap: 2rem;
     max-width: 1400px;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Info Lomba Cards - 3 Column Layout */
