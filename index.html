@@ -24,7 +24,18 @@
                 <li><a href="ecommerce.html">E-commerce</a></li>
                 <li><a href="berita.html">Berita</a></li>
                 <li><a href="#kontak">Contact</a></li>
+                <li class="nav-item-search">
+                    <div class="nav-search">
+                        <input type="text" id="navbarSearch" placeholder="Cari...">
+                        <button id="navbarSearchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                </li>
             </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
         <section class="hero" id="beranda">
             <div class="hero-overlay"></div>
@@ -347,7 +358,7 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-map-pin"></i>
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-text">
                             <h4>Lokasi</h4>
@@ -385,7 +396,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="kontak">
         <div class="footer-content">
             <div class="footer-section footer-about">
                 <div class="footer-logo-section">
@@ -419,21 +430,21 @@
             <div class="footer-section footer-nav">
                 <h3>Navigasi</h3>
                 <ul>
-                    <li><a href="#beranda">Beranda</a></li>
-                    <li><a href="#tentang">Tentang</a></li>
-                    <li><a href="#artikel">Artikel</a></li>
-                    <li><a href="#testimoni">Testimoni</a></li>
-                    <li><a href="#infolmba">Info Lomba</a></li>
-                    <li><a href="#ecommerce">E-Commerce</a></li>
-                    <li><a href="#berita">Berita</a></li>
-                    <li><a href="#kontak">Contact</a></li>
+                    <li><a href="index.html#beranda">Beranda</a></li>
+                    <li><a href="index.html#tentang">Tentang</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                    <li><a href="testimoni.html">Testimoni</a></li>
+                    <li><a href="info lomba.html">Info Lomba</a></li>
+                    <li><a href="ecommerce.html">E-commerce</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="index.html#kontak">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section footer-contact">
                 <h3>Hubungi Kami</h3>
                 <div class="footer-item">
                     <div class="footer-item-header">
-                        <i class="fas fa-map-pin"></i>
+                        <i class="fas fa-map-marker-alt"></i>
                         <p class="label">Lokasi</p>
                     </div>
                     <p>Makassar, Indonesia</p>
@@ -671,6 +682,7 @@
     </script>
 
 
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
