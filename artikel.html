@@ -92,21 +92,42 @@
                     </div>
                     <div class="filter-row">
                         <div class="filter-item">
-                            <select name="kategori" class="filter-select">
+                            <select name="kategori" class="filter-select" style="display:none;">
                                 <option value="">Semua</option>
                                 <option value="kompetisi">Kompetisi</option>
                                 <option value="pkm">PKM</option>
                                 <option value="kti">KTI</option>
                             </select>
-                            <i class="fas fa-chevron-down chevron-icon"></i>
+                            <div class="filter-dropdown">
+                                <div class="filter-dropdown-trigger">
+                                    <span class="trigger-text">Semua</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="filter-dropdown-menu">
+                                    <div class="filter-dropdown-item" data-value="">Semua</div>
+                                    <div class="filter-dropdown-item" data-value="kompetisi">Kompetisi</div>
+                                    <div class="filter-dropdown-item" data-value="pkm">PKM</div>
+                                    <div class="filter-dropdown-item" data-value="kti">KTI</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="filter-item">
-                            <select name="tenggat" class="filter-select">
-                                <option value="">Tenggat Waktu</option>
+                            <select name="tenggat" class="filter-select" style="display:none;">
+                                <option value="">Semua</option>
                                 <option value="terbaru">Terbaru</option>
                                 <option value="minggu">Minggu Ini</option>
                             </select>
-                            <i class="fas fa-chevron-down chevron-icon"></i>
+                            <div class="filter-dropdown">
+                                <div class="filter-dropdown-trigger">
+                                    <span class="trigger-text">Tenggat Waktu</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="filter-dropdown-menu">
+                                    <div class="filter-dropdown-item" data-value="">Semua</div>
+                                    <div class="filter-dropdown-item" data-value="terbaru">Terbaru</div>
+                                    <div class="filter-dropdown-item" data-value="minggu">Minggu Ini</div>
+                                </div>
+                            </div>
                         </div>
                         <button class="btn-search" id="searchBtn">Cari</button>
                     </div>
@@ -133,7 +154,7 @@
             <div class="artikel-grid ebook-grid">
                 <!-- Grid Artikel -->
                 <!-- Card 1 -->
-                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/11SW9PZDmqj4tm8ROePxfuzrSAYXCunbP/view?usp=drive_link" data-description="<strong>E-Book PKM-GFT Tahun 2026</strong><br><br>E-Book ini kalian bisa kalian jadikan referensi kalian untuk mengikuti PKM selanjutnya. Panduan lengkap mencakup tata cara penulisan proposal, kriteria penilaian, dan tips sukses mengikuti Program Kreativitas Mahasiswa.">
+                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/11SW9PZDmqj4tm8ROePxfuzrSAYXCunbP/view?usp=drive_link" data-description="<strong>E-Book PKM-GFT Tahun 2026</strong><br><br>E-Book ini kalian bisa kalian jadikan referensi kalian untuk mengikuti PKM selanjutnya. Panduan lengkap mencakup tata cara penulisan proposal, kriteria penilaian, dan tips sukses mengikuti Program Kreativitas Mahasiswa." data-date="2026-02-15">
                     <div class="card-image-wrapper">
                         <div class="card-badge">PKM</div>
                         <img src="img/Artikel/artikel 1.jpg" alt="PKM-GFT 2026" class="artikel-img card-img-poster">
@@ -147,7 +168,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="artikel-card" data-category="kti" data-pdf="https://drive.google.com/file/d/1_46ndsNer6OSqd1rotsZukkE77nWM3xL/view?usp=drive_link" data-description="<strong>E-Book Karya Tulis Ilmiah 2026</strong><br><br>Karya Tulis Ilmiah ini bisa dijadikan acuan kepada seluruh mahasiswa/siswi untuk dijadikan sebagai cara penulisan terhadap karya tulis yang kalian buat nanti.">
+                <div class="artikel-card" data-category="kti" data-pdf="https://drive.google.com/file/d/1_46ndsNer6OSqd1rotsZukkE77nWM3xL/view?usp=drive_link" data-description="<strong>E-Book Karya Tulis Ilmiah 2026</strong><br><br>Karya Tulis Ilmiah ini bisa dijadikan acuan kepada seluruh mahasiswa/siswi untuk dijadikan sebagai cara penulisan terhadap karya tulis yang kalian buat nanti." data-date="2026-02-10">
                     <div class="card-image-wrapper">
                         <div class="card-badge">KTI</div>
                         <img src="img/Artikel/artikel 2.jpg" alt="KTI 2026" class="artikel-img card-img-poster">
@@ -161,7 +182,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="artikel-card" data-category="kompetisi" data-pdf="https://drive.google.com/file/d/1eS18OSKOG64a_ZEM9ns8PZAR21biZpf1/view?usp=drive_link" data-description="<strong>E-Book Panduan Business Plan Competition 2026</strong><br><br>Panduan lengkap untuk menyusun rencana bisnis yang kompetitif dan inovatif. Dapatkan strategi pemenang untuk memikat juri.">
+                <div class="artikel-card" data-category="kompetisi" data-pdf="https://drive.google.com/file/d/1eS18OSKOG64a_ZEM9ns8PZAR21biZpf1/view?usp=drive_link" data-description="<strong>E-Book Panduan Business Plan Competition 2026</strong><br><br>Panduan lengkap untuk menyusun rencana bisnis yang kompetitif dan inovatif. Dapatkan strategi pemenang untuk memikat juri." data-date="2026-01-20">
                     <div class="card-image-wrapper">
                         <div class="card-badge">KOMPETISI</div>
                         <img src="img/Artikel/artikel 3.jpg" alt="Business Plan 2026" class="artikel-img card-img-poster">
@@ -175,7 +196,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1axC_uyZ4pCiZTPCdzPheLwKHvK3_aMW_/view?usp=sharing" data-description="<strong>E-Book Proposal PPK ORMAWA 2025</strong><br><br>Referensi proposal pengabdian masyarakat untuk organisasi mahasiswa yang telah teruji kualitasnya.">
+                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1axC_uyZ4pCiZTPCdzPheLwKHvK3_aMW_/view?usp=sharing" data-description="<strong>E-Book Proposal PPK ORMAWA 2025</strong><br><br>Referensi proposal pengabdian masyarakat untuk organisasi mahasiswa yang telah teruji kualitasnya." data-date="2026-03-12">
                     <div class="card-image-wrapper">
                         <div class="card-badge">PKM</div>
                         <img src="img/Artikel/artikel 4.jpg" alt="PPK ORMAWA 2025" class="artikel-img card-img-poster">
@@ -189,7 +210,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/19N9Iyjd6lMVV6uSYAdablwlprh66aJq0/view?usp=sharing" data-description="<strong>E-Book Proposal Business Plan Competition 2025</strong><br><br>Contoh proposal bisnis plan yang telah teruji dan layak dijadikan referensi utama bagi tim Anda.">
+                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/19N9Iyjd6lMVV6uSYAdablwlprh66aJq0/view?usp=sharing" data-description="<strong>E-Book Proposal Business Plan Competition 2025</strong><br><br>Contoh proposal bisnis plan yang telah teruji dan layak dijadikan referensi utama bagi tim Anda." data-date="2026-03-05">
                     <div class="card-image-wrapper">
                         <div class="card-badge">PKM</div>
                         <img src="img/Artikel/artikel 5.jpg" alt="BPC 2025" class="artikel-img card-img-poster">
@@ -203,7 +224,7 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1Qj_iv6eXMXiOo-MyFxcXdPk4VskogCEH/view?usp=sharing" data-description="<strong>E-Book Proposal Business Plan Competition 2025 (Unggulan)</strong><br><br>Karya unggulan yang bisa menjadi inspirasi utama bagi tim Anda dalam merancang model bisnis.">
+                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1Qj_iv6eXMXiOo-MyFxcXdPk4VskogCEH/view?usp=sharing" data-description="<strong>E-Book Proposal Business Plan Competition 2025 (Unggulan)</strong><br><br>Karya unggulan yang bisa menjadi inspirasi utama bagi tim Anda dalam merancang model bisnis." data-date="2026-02-28">
                     <div class="card-image-wrapper">
                         <div class="card-badge">PKM</div>
                         <img src="img/Artikel/artikel 6.jpg" alt="BPC 2025 Item 2" class="artikel-img card-img-poster">
@@ -217,7 +238,7 @@
                 </div>
 
                 <!-- Card 7 -->
-                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1ewM0dDKkXH1mvVpAsy-P41IvZYTUQJs6/view?usp=sharing" data-description="<strong>E-Book Panduan P2MW 2024</strong><br><br>Program Pembinaan Mahasiswa Wirausaha untuk tahun 2024. Panduan resmi untuk mendapatkan hibah kewirausahaan.">
+                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1ewM0dDKkXH1mvVpAsy-P41IvZYTUQJs6/view?usp=sharing" data-description="<strong>E-Book Panduan P2MW 2024</strong><br><br>Program Pembinaan Mahasiswa Wirausaha untuk tahun 2024. Panduan resmi untuk mendapatkan hibah kewirausahaan." data-date="2026-04-15">
                     <div class="card-image-wrapper">
                         <div class="card-badge">PKM</div>
                         <img src="img/Artikel/artikel 7.jpg" alt="P2MW 2024" class="artikel-img card-img-poster">
@@ -231,7 +252,7 @@
                 </div>
 
                 <!-- Card 8 -->
-                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1cXQiRgpkuebJfFXYHFf9stv-Z0QjGUcK/view?usp=sharing" data-description="<strong>E-Book Proposal LKTI 2024</strong><br><br>Kumpulan proposal Lomba Karya Tulis Ilmiah Tingkat Nasional yang berhasil meraih prestasi terbaik.">
+                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1cXQiRgpkuebJfFXYHFf9stv-Z0QjGUcK/view?usp=sharing" data-description="<strong>E-Book Proposal LKTI 2024</strong><br><br>Kumpulan proposal Lomba Karya Tulis Ilmiah Tingkat Nasional yang berhasil meraih prestasi terbaik." data-date="2026-05-10">
                     <div class="card-image-wrapper">
                         <div class="card-badge">PKM</div>
                         <img src="img/Artikel/artikel 8.jpg" alt="LKTI 2024" class="artikel-img card-img-poster">
@@ -245,7 +266,7 @@
                 </div>
 
                 <!-- Card 9 -->
-                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1ffFTjMxfs-6k_cpGpHZ2rPgI_kWtGhGb/view?usp=sharing" data-description="<strong>E-Book Proposal PKM 2024</strong><br><br>Koleksi proposal PKM tahun 2024 yang berhasil lolos pendanaan dan masuk babak nasional.">
+                <div class="artikel-card" data-category="pkm" data-pdf="https://drive.google.com/file/d/1ffFTjMxfs-6k_cpGpHZ2rPgI_kWtGhGb/view?usp=sharing" data-description="<strong>E-Book Proposal PKM 2024</strong><br><br>Koleksi proposal PKM tahun 2024 yang berhasil lolos pendanaan dan masuk babak nasional." data-date="2026-05-11">
                     <div class="card-image-wrapper">
                         <div class="card-badge">PKM</div>
                         <img src="img/Artikel/artikel 9.jpg" alt="PKM 2024" class="artikel-img card-img-poster">
@@ -463,28 +484,6 @@
             position: relative;
         }
 
-        .filter-select {
-            width: 100%;
-            appearance: none;
-            padding: 0.8rem 1rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 1rem;
-            color: #64748b;
-            cursor: pointer;
-            outline: none;
-            background: #fff;
-        }
-
-        .chevron-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            pointer-events: none;
-            color: #666;
-            font-size: 0.9rem;
-        }
 
         .btn-search {
             background: var(--primary-navy);
@@ -677,6 +676,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const searchInput = document.querySelector('.search-input');
             const kategoriSelect = document.querySelector('select[name="kategori"]');
+            const tenggatSelect = document.querySelector('select[name="tenggat"]');
             const searchBtn = document.getElementById('searchBtn');
             const cards = document.querySelectorAll('.artikel-card');
             const noResults = document.getElementById('no-results');
@@ -684,21 +684,38 @@
             function performSearch() {
                 const keyword = searchInput.value.toLowerCase().trim();
                 const selectedKategori = kategoriSelect.value.toLowerCase();
+                const selectedTenggat = tenggatSelect.value.toLowerCase();
                 let foundCount = 0;
+
+                // Get current date for 'minggu ini' filter
+                const today = new Date();
+                const oneWeekAgo = new Date(today);
+                oneWeekAgo.setDate(today.getDate() - 7);
+                const thirtyDaysAgo = new Date(today);
+                thirtyDaysAgo.setDate(today.getDate() - 30);
 
                 cards.forEach(card => {
                     const titleEl = card.querySelector('h4');
                     const title = titleEl ? titleEl.textContent.toLowerCase() : "";
                     const description = (card.getAttribute('data-description') || "").toLowerCase();
                     const cardKategori = (card.getAttribute('data-category') || "").toLowerCase();
+                    const dateAttr = card.getAttribute('data-date') || "";
 
-                    // Logika Filter:
-                    // 1. Cek Kategori (jika "Semua" atau cocok)
-                    // 2. Cek Kata Kunci (jika kosong atau ada di judul/deskripsi)
                     const matchesKategori = (selectedKategori === "" || cardKategori === selectedKategori);
                     const matchesKeyword = (keyword === "" || title.includes(keyword) || description.includes(keyword));
 
-                    if (matchesKategori && matchesKeyword) {
+                    // Tenggat Filter Logic
+                    let matchesTenggat = true;
+                    if (dateAttr) {
+                        const cardDate = new Date(dateAttr);
+                        if (selectedTenggat === 'minggu') {
+                            matchesTenggat = cardDate >= oneWeekAgo && cardDate <= today;
+                        } else if (selectedTenggat === 'terbaru') {
+                            matchesTenggat = cardDate >= thirtyDaysAgo;
+                        }
+                    }
+
+                    if (matchesKategori && matchesKeyword && matchesTenggat) {
                         card.style.display = 'flex';
                         foundCount++;
                     } else {
@@ -731,6 +748,7 @@
 
             // Opsional: Langsung filter saat kategori diubah
             kategoriSelect.addEventListener('change', performSearch);
+            tenggatSelect.addEventListener('change', performSearch);
 
             // Handle category from URL hash or query param
             function checkHashAndFilter() {

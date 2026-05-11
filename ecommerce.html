@@ -92,21 +92,42 @@
                     </div>
                     <div class="filter-row">
                         <div class="filter-item">
-                            <select name="kategori" class="filter-select">
+                            <select name="kategori" class="filter-select" style="display:none;">
                                 <option value="">Semua</option>
                                 <option value="desain">Desain</option>
                                 <option value="karya">Karya</option>
                                 <option value="speech">Public Speaking</option>
                             </select>
-                            <i class="fas fa-chevron-down chevron-icon"></i>
+                            <div class="filter-dropdown">
+                                <div class="filter-dropdown-trigger">
+                                    <span class="trigger-text">Semua</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="filter-dropdown-menu">
+                                    <div class="filter-dropdown-item" data-value="">Semua</div>
+                                    <div class="filter-dropdown-item" data-value="desain">Desain</div>
+                                    <div class="filter-dropdown-item" data-value="karya">Karya</div>
+                                    <div class="filter-dropdown-item" data-value="speech">Public Speaking</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="filter-item">
-                            <select name="tenggat" class="filter-select">
-                                <option value="">Rating</option>
+                            <select name="tenggat" class="filter-select" style="display:none;">
+                                <option value="">Semua</option>
                                 <option value="tertinggi">Tertinggi</option>
                                 <option value="terpopuler">Terpopuler</option>
                             </select>
-                            <i class="fas fa-chevron-down chevron-icon"></i>
+                            <div class="filter-dropdown">
+                                <div class="filter-dropdown-trigger">
+                                    <span class="trigger-text">Tenggat Waktu</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="filter-dropdown-menu">
+                                    <div class="filter-dropdown-item" data-value="">Semua</div>
+                                    <div class="filter-dropdown-item" data-value="tertinggi">Tertinggi</div>
+                                    <div class="filter-dropdown-item" data-value="terpopuler">Terpopuler</div>
+                                </div>
+                            </div>
                         </div>
                         <button class="btn-search" id="searchBtn">Cari</button>
                     </div>
@@ -132,7 +153,7 @@
             <div class="artikel-grid ebook-grid">
                 <!-- Row 1 -->
                 <!-- Card 1: Lucia Margarita -->
-                <div class="artikel-card" data-category="karya">
+                <div class="artikel-card" data-category="karya" data-rating="4.9">
                     <div class="card-image-wrapper">
                         <div class="card-badge">Karya</div>
                         <img src="img/E-commerce/e-commerce 1.jpg" alt="Mentoring Lucia" class="artikel-img card-img-poster">
@@ -150,7 +171,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="artikel-card" data-category="desain">
+                <div class="artikel-card" data-category="desain" data-rating="4.8">
                     <div class="card-image-wrapper">
                         <div class="card-badge">Desain</div>
                         <img src="img/E-commerce/e-commerce 2.jpg" alt="Mentor Desain" class="artikel-img card-img-poster">
@@ -446,27 +467,6 @@
             position: relative;
         }
 
-        .filter-select {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            appearance: none;
-            cursor: pointer;
-            background: #fff;
-            font-size: 1rem;
-            color: #64748b;
-        }
-
-        .chevron-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            pointer-events: none;
-            color: #666;
-            font-size: 0.9rem;
-        }
 
         .btn-search {
             background: var(--primary-navy);
@@ -650,8 +650,8 @@
                 if (ratingSelect.value === 'tertinggi' && foundCount > 0) {
                     const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
                     visibleCards.sort((a, b) => {
-                        const rateA = parseFloat(a.querySelector('.card-date').textContent.split('(')[0].trim());
-                        const rateB = parseFloat(b.querySelector('.card-date').textContent.split('(')[0].trim());
+                        const rateA = parseFloat(a.getAttribute('data-rating') || 0);
+                        const rateB = parseFloat(b.getAttribute('data-rating') || 0);
                         return rateB - rateA;
                     });
                     visibleCards.forEach(card => cardsContainer.appendChild(card));

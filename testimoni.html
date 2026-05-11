@@ -94,20 +94,40 @@
                     </div>
                     <div class="filter-row">
                         <div class="filter-item">
-                            <select name="kategori" class="filter-select">
+                            <select name="kategori" class="filter-select" style="display:none;">
                                 <option value="">Semua</option>
                                 <option value="juara">Juara</option>
                                 <option value="Mentoring">Mentoring</option>
                             </select>
-                            <i class="fas fa-chevron-down chevron-icon"></i>
+                            <div class="filter-dropdown">
+                                <div class="filter-dropdown-trigger">
+                                    <span class="trigger-text">Semua</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="filter-dropdown-menu">
+                                    <div class="filter-dropdown-item" data-value="">Semua</div>
+                                    <div class="filter-dropdown-item" data-value="juara">Juara</div>
+                                    <div class="filter-dropdown-item" data-value="Mentoring">Mentoring</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="filter-item">
-                            <select name="tenggat" class="filter-select">
-                                <option value="">Tenggat Waktu</option>
+                            <select name="tenggat" class="filter-select" style="display:none;">
+                                <option value="">Semua</option>
                                 <option value="terbaru">Terbaru</option>
                                 <option value="minggu">Minggu Ini</option>
                             </select>
-                            <i class="fas fa-chevron-down chevron-icon"></i>
+                            <div class="filter-dropdown">
+                                <div class="filter-dropdown-trigger">
+                                    <span class="trigger-text">Tenggat Waktu</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="filter-dropdown-menu">
+                                    <div class="filter-dropdown-item" data-value="">Semua</div>
+                                    <div class="filter-dropdown-item" data-value="terbaru">Terbaru</div>
+                                    <div class="filter-dropdown-item" data-value="minggu">Minggu Ini</div>
+                                </div>
+                            </div>
                         </div>
                         <button class="btn-search" id="searchBtn">Cari</button>
                     </div>
@@ -499,28 +519,6 @@
             width: 100%;
         }
 
-        .filter-select {
-            width: 100%;
-            appearance: none;
-            padding: 0.8rem 1rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 1rem;
-            color: #64748b;
-            cursor: pointer;
-            outline: none;
-            background: #fff;
-        }
-
-        .chevron-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            pointer-events: none;
-            color: #666;
-            font-size: 0.9rem;
-        }
 
         .btn-search {
             background: var(--primary-navy);
@@ -797,6 +795,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const searchInput = document.querySelector('.search-input');
             const kategoriSelect = document.querySelector('select[name="kategori"]');
+            const tenggatSelect = document.querySelector('select[name="tenggat"]');
             const searchBtn = document.getElementById('searchBtn');
             const cards = document.querySelectorAll('.artikel-card');
             const noResults = document.getElementById('no-results');
@@ -804,21 +803,49 @@
             function performSearch() {
                 const keyword = searchInput.value.toLowerCase().trim();
                 const selectedKategori = kategoriSelect.value.toLowerCase();
+                const selectedTenggat = tenggatSelect.value.toLowerCase();
                 let foundCount = 0;
+
+                // Get current date for 'minggu ini' filter
+                const today = new Date();
+                const oneWeekAgo = new Date(today);
+                oneWeekAgo.setDate(today.getDate() - 7);
+                const thirtyDaysAgo = new Date(today);
+                thirtyDaysAgo.setDate(today.getDate() - 30);
 
                 cards.forEach(card => {
                     const titleEl = card.querySelector('h4');
                     const title = titleEl ? titleEl.textContent.toLowerCase() : "";
                     const description = (card.getAttribute('data-description') || "").toLowerCase();
                     const cardKategori = (card.getAttribute('data-category') || "").toLowerCase();
-
-                    // Logika Filter:
-                    // 1. Cek Kategori (jika "Semua" atau cocok)
-                    // 2. Cek Kata Kunci (jika kosong atau ada di judul/deskripsi)
+                    
+                    // Parse card date from .card-date text
+                    const dateText = card.querySelector('.card-date') ? card.querySelector('.card-date').textContent.trim() : "";
+                    
                     const matchesKategori = (selectedKategori === "" || cardKategori === selectedKategori);
                     const matchesKeyword = (keyword === "" || title.includes(keyword) || description.includes(keyword));
+                    
+                    // Tenggat Filter Logic
+                    let matchesTenggat = true;
+                    if (dateText) {
+                        const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+                        const parts = dateText.split(/\s+/).filter(p => p.length > 0 && !p.includes('calendar'));
+                        if (parts.length >= 3) {
+                            const day = parseInt(parts[parts.length-3]);
+                            const monthIndex = months.indexOf(parts[parts.length-2]);
+                            const year = parseInt(parts[parts.length-1]);
+                            if (monthIndex !== -1) {
+                                const cardDate = new Date(year, monthIndex, day);
+                                if (selectedTenggat === 'minggu') {
+                                    matchesTenggat = cardDate >= oneWeekAgo && cardDate <= today;
+                                } else if (selectedTenggat === 'terbaru') {
+                                    matchesTenggat = cardDate >= thirtyDaysAgo;
+                                }
+                            }
+                        }
+                    }
 
-                    if (matchesKategori && matchesKeyword) {
+                    if (matchesKategori && matchesKeyword && matchesTenggat) {
                         card.style.display = 'flex';
                         foundCount++;
                     } else {
@@ -851,6 +878,7 @@
 
             // Opsional: Langsung filter saat kategori diubah
             kategoriSelect.addEventListener('change', performSearch);
+            tenggatSelect.addEventListener('change', performSearch);
 
             // Handle category from URL hash or query param
             function checkHashAndFilter() {
