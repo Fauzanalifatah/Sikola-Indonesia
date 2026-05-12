@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* --- Logika Pemutar Musik Latar --- */
-    const musicTrackUrl = 'music/Maudy Ayunda - Kejar Mimpi _ Official Music Video [zbPt9LkPT4c].mp3';
+    const musicTrackUrl = 'music/CJR __ Lebih Baik (lirik) [A1QCCTfXjFw].mp3';
     
     const musicHTML = `
         <div id="musicToggle" class="music-toggle" title="Putar Musik Latar">
@@ -268,9 +268,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', resumeMusic);
     document.addEventListener('touchstart', resumeMusic);
+
+    /* --- Lightbox Logic --- */
+    const createLightbox = () => {
+        const lightboxHTML = `
+            <div id="sikolaLightbox" class="sikola-lightbox">
+                <div class="lightbox-content">
+                    <span class="lightbox-close"><i class="fas fa-times"></i></span>
+                    <img id="lightboxImg" src="" alt="Lightbox">
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+        
+        const lightbox = document.getElementById('sikolaLightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+
+        const openLightbox = (src) => {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // ESC key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        return { openLightbox };
+    };
+
+    const lightboxSystem = createLightbox();
+
+    // Attach to all elements with mentor-img-frame-new or exp-card-img
+    document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('.mentor-img-frame-new') || e.target.closest('.exp-card-img');
+        if (trigger) {
+            const img = trigger.querySelector('img');
+            if (img) {
+                lightboxSystem.openLightbox(img.src);
+            }
+        }
+    });
 });
-
-
-
-
-

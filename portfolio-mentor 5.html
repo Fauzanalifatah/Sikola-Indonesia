@@ -389,7 +389,7 @@
             line-height: 1.6;
         }
 
-        @media (max-width: 1024px) {
+                @media (max-width: 1024px) {
             .portfolio-container { grid-template-columns: 1fr; margin-top: 2rem; }
             .booking-card { position: static; }
             .exp-grid { grid-template-columns: 1fr; }
@@ -397,12 +397,45 @@
 
         @media (max-width: 650px) {
             .portfolio-hero { padding-top: 80px !important; }
-            .portfolio-hero h1 { font-size: 2.22rem !important; }
-            .mentor-header-info h2 { font-size: 2.22rem !important; }
+            .portfolio-hero h1 { font-size: 2.2rem !important; }
+            .mentor-header-info h2 { font-size: 2.2rem !important; }
             .booking-inputs-row { grid-template-columns: 1fr !important; }
-            .exp-tab { font-size: 1rem !important; padding: 1rem 0.5rem !important; }
-            .exp-grid { padding: 1.5rem !important; }
-            .mentor-main-info { flex-direction: column; text-align: center; }
+            
+            /* Ultra-Compact Original Style */
+            .experience-tabs-container {
+                display: flex !important;
+                gap: 0 !important;
+                padding: 0 !important;
+                border-bottom: 2px solid #e2e8f0 !important;
+                width: 100% !important;
+                overflow: hidden !important;
+                background: #fff !important;
+            }
+            
+            .exp-tab { 
+                flex: 1 !important;
+                font-size: 0.65rem !important; 
+                padding: 10px 1px !important; 
+                border: 1.5px solid #e2e8f0 !important;
+                border-bottom: none !important;
+                border-radius: 10px 10px 0 0 !important;
+                background: #fff !important;
+                margin-right: -1.5px !important;
+                text-align: center !important;
+                min-width: 0 !important;
+                white-space: nowrap !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .exp-tab.active {
+                background: var(--primary-navy) !important;
+                color: #fff !important;
+                border-color: var(--primary-navy) !important;
+                z-index: 10 !important;
+            }
+
+            .exp-grid { padding: 1.5rem !important; gap: 1.2rem !important; }
             .history-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -819,6 +852,12 @@
 </body>
 
 </html>
+
+
+
+
+
+
 
 
 
