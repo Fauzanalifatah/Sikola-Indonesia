@@ -2471,6 +2471,7 @@ section > .btn-primary:hover { background: #ffd600 !important; border-color: #ff
 
 /* Standardize Card Body positions to match Testimoni */
 .card-lomba .card-body, .card-mentor .card-body, .card-berita .card-body, .testimoni-cards .card .card-body { padding: 1.1rem !important; justify-content: space-between !important; display: flex !important; flex-direction: column !important; flex: 1 !important; height: auto !important; }
+.artikel-body { padding: 1.5rem !important; justify-content: space-between !important; display: flex !important; flex-direction: column !important; flex: 1 !important; height: auto !important; }
 .card-divider { margin-top: 0.6rem !important; margin-bottom: 0.6rem !important; }
 
 /* Standardize max-width for all card grids to prevent them from stretching too wide */
@@ -2491,49 +2492,87 @@ section > .btn-primary:hover { background: #ffd600 !important; border-color: #ff
 
 /* Artikel Section - Simple Text Link Style on the Right */
 .artikel-card .btn-detail {
-    width: auto !important;
-    background: transparent !important;
-    color: var(--primary-color) !important;
-    border: none !important;
-    padding: 0 !important;
-    font-size: 0.95rem !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0.5rem auto 0 !important;
+    background: var(--primary-color) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 12px 30px !important;
+    border-radius: 50px !important;
     font-weight: 700 !important;
-    text-transform: none !important;
-    align-self: flex-end !important;
-    margin-left: auto !important;
-    margin-right: 0 !important;
-    justify-content: flex-end !important;
+    font-size: 0.95rem !important;
+    transition: all 0.3s ease !important;
+    text-align: center !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .artikel-card .btn-detail i {
-    font-size: 0.8rem !important;
-    margin-left: 6px !important;
-    transition: transform 0.3s ease !important;
+    display: none !important;
 }
 
 .artikel-card .btn-detail:hover {
     background: #0077c2 !important;
-    border-color: #0077c2 !important;
-    color: #fff !important;
+    color: #ffffff !important;
     text-decoration: none !important;
     box-shadow: 0 8px 20px rgba(0, 119, 194, 0.4) !important;
     transform: translateY(-2px) !important;
 }
 
 .artikel-card .btn-detail:hover i {
-    transform: translateX(5px) !important;
+    display: none !important;
 }
 
 /* Ensure Artikel cards align buttons correctly */
-.artikel-card .card-body {
+.artikel-body {
     display: flex !important;
     flex-direction: column !important;
+    height: 100% !important;
     justify-content: space-between !important;
 }
+
+@media (max-width: 768px) {
+    .artikel-body p {
+        text-align: justify !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .artikel-card .btn-detail {
+        padding: 10px 15px !important;
+        font-size: 0.85rem !important;
+        white-space: nowrap !important;
+    }
+
+    section > .btn-primary {
+        padding: 0.6rem 1.8rem !important;
+        font-size: 0.85rem !important;
+        min-height: auto !important;
+        margin-top: 1rem !important;
+    }
+}
+
 
 
 /* Shrink date text to match reference design */
 .card-body .date, .card-lomba .date, .testimoni-cards .card .date { font-size: 0.8rem !important; font-weight: 500 !important; margin-bottom: 0.6rem !important; gap: 0.35rem !important; display: flex !important; align-items: center !important; line-height: 1 !important; }
+
+/* Responsive Artikel Grid on Home Page */
+@media (max-width: 1024px) {
+    .artikel-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .artikel-grid {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        padding: 0 !important;
+        gap: 1.5rem !important;
+    }
+}
 .card-body .date i, .card-lomba .date i, .testimoni-cards .card .date i { font-size: 0.8rem !important; width: auto !important; height: auto !important; background: none !important; border-radius: 0 !important; display: inline !important; }
 
 /* Badge style matching ZanWeb reference - more rectangular shape */
