@@ -2457,9 +2457,9 @@ footer {
 
 /* Update Baca Selengkapnya buttons to Solid Blue and Full Width */
 .btn-detail { color: #fff !important; border-color: var(--primary-color) !important; background: var(--primary-color) !important; }
-.btn-detail:hover { background: #05122a !important; box-shadow: 0 6px 15px rgba(10, 35, 81, 0.4) !important; color: #fff !important; }
+.btn-detail:hover { background: #0077c2 !important; border-color: #0077c2 !important; box-shadow: 0 8px 20px rgba(0, 119, 194, 0.4) !important; color: #fff !important; }
 .card-lomba .btn-detail, .testimoni-cards .card .btn-detail, .card-berita .btn-detail { background: var(--primary-color) !important; color: #fff !important; }
-.card-lomba .btn-detail:hover, .testimoni-cards .card .btn-detail:hover, .card-berita .btn-detail:hover { background: #05122a !important; box-shadow: 0 6px 15px rgba(10, 35, 81, 0.4) !important; color: #fff !important; }
+.card-lomba .btn-detail:hover, .testimoni-cards .card .btn-detail:hover, .card-berita .btn-detail:hover { background: #0077c2 !important; border-color: #0077c2 !important; box-shadow: 0 8px 20px rgba(0, 119, 194, 0.4) !important; color: #fff !important; }
 
 /* Update Badges to Biru Tua */
 .card-badge, .berita-badge { background: var(--primary-color) !important; color: #fff !important; }
@@ -2512,10 +2512,11 @@ section > .btn-primary:hover { background: #ffd600 !important; border-color: #ff
 }
 
 .artikel-card .btn-detail:hover {
-    background: #05122a !important;
+    background: #0077c2 !important;
+    border-color: #0077c2 !important;
     color: #fff !important;
     text-decoration: none !important;
-    box-shadow: 0 6px 15px rgba(10, 35, 81, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(0, 119, 194, 0.4) !important;
     transform: translateY(-2px) !important;
 }
 
