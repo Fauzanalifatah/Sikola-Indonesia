@@ -357,10 +357,11 @@ body {
 }
 
 .btn-primary:hover {
-    background: var(--secondary-color);
-    border-color: var(--secondary-color);
+    background: #0077c2 !important;
+    border-color: #0077c2 !important;
     box-shadow: 0 8px 25px rgba(0, 119, 194, 0.35);
     transform: translateY(-3px);
+    color: #fff !important;
 }
 
 .btn-primary:active {
@@ -369,16 +370,16 @@ body {
 
 .btn-secondary {
     background: transparent;
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
+    color: #0a2351;
+    border: 2px solid #0a2351;
     padding: 0.9rem 2rem;
     font-size: 1rem;
 }
 
 .btn-secondary:hover {
-    background: var(--secondary-color);
+    background: #0a2351;
     color: #fff;
-    box-shadow: 0 8px 25px rgba(0, 119, 194, 0.3);
+    box-shadow: 0 8px 25px rgba(10, 35, 81, 0.3);
     transform: translateY(-3px);
 }
 
@@ -520,22 +521,24 @@ section > .btn-primary {
 }
 
 .btn-group .btn-primary:hover {
-    background: #0a1a3a;
+    background: #0077c2 !important;
+    border-color: #0077c2 !important;
+    box-shadow: 0 8px 20px rgba(0, 119, 194, 0.4) !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(10, 35, 81, 0.3);
+    color: #fff !important;
 }
 
 .btn-group .btn-secondary {
     background: transparent;
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
+    color: #0a2351;
+    border: 2px solid #0a2351;
 }
 
 .btn-group .btn-secondary:hover {
-    background: var(--secondary-color);
+    background: #0a2351;
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 119, 194, 0.3);
+    box-shadow: 0 6px 15px rgba(10, 35, 81, 0.3);
 }
 
 .tab-btn {
@@ -909,12 +912,17 @@ section {
     align-items: flex-start;
 }
 
-.mentor-name {
-    color: #444;
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-    min-height: 1.1rem;
+.mentor-name, 
+.card-body .mentor-name, 
+.artikel-body .mentor-name {
+    color: #0a2351 !important;
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    margin: 0.6rem auto 1rem !important;
+    display: block !important;
+    width: 100% !important;
+    letter-spacing: -0.2px;
 }
 
 .card-lomba .card-body {
@@ -1128,12 +1136,6 @@ section {
     font-weight: 700;
 }
 
-.card-mentor .mentor-name {
-    color: #444;
-    font-size: 1.05rem;
-    margin: 0 0 0.5rem 0;
-    font-weight: 600;
-}
 
 .card-mentor .desc {
     color: var(--text-light);
@@ -2457,7 +2459,7 @@ footer {
 .btn-detail { color: #fff !important; border-color: var(--primary-color) !important; background: var(--primary-color) !important; }
 .btn-detail:hover { background: #05122a !important; box-shadow: 0 6px 15px rgba(10, 35, 81, 0.4) !important; color: #fff !important; }
 .card-lomba .btn-detail, .testimoni-cards .card .btn-detail, .card-berita .btn-detail { background: var(--primary-color) !important; color: #fff !important; }
-.card-lomba .btn-detail:hover, .testimoni-cards .card .btn-detail:hover, .card-berita .btn-detail:hover { background: #05122a !important; box-shadow: 0 6px 15px rgba(10, 35, 81, 0.4) !important; }
+.card-lomba .btn-detail:hover, .testimoni-cards .card .btn-detail:hover, .card-berita .btn-detail:hover { background: #05122a !important; box-shadow: 0 6px 15px rgba(10, 35, 81, 0.4) !important; color: #fff !important; }
 
 /* Update Badges to Biru Tua */
 .card-badge, .berita-badge { background: var(--primary-color) !important; color: #fff !important; }
@@ -2465,7 +2467,7 @@ footer {
 
 /* Override Lihat Semua dan Lihat Mentor to Yellow */
 section > .btn-primary { background: var(--accent-color) !important; color: #0a1a2a !important; border-color: var(--accent-color) !important; box-shadow: 0 6px 20px rgba(255, 230, 0, 0.3) !important; }
-section > .btn-primary:hover { background: #ffd600 !important; border-color: #ffd600 !important; box-shadow: 0 8px 25px rgba(255, 230, 0, 0.4) !important; }
+section > .btn-primary:hover { background: #ffd600 !important; border-color: #ffd600 !important; color: #000 !important; box-shadow: 0 8px 25px rgba(255, 230, 0, 0.4) !important; }
 
 /* Standardize Card Body positions to match Testimoni */
 .card-lomba .card-body, .card-mentor .card-body, .card-berita .card-body, .testimoni-cards .card .card-body { padding: 1.1rem !important; justify-content: space-between !important; display: flex !important; flex-direction: column !important; flex: 1 !important; height: auto !important; }
@@ -2510,11 +2512,11 @@ section > .btn-primary:hover { background: #ffd600 !important; border-color: #ff
 }
 
 .artikel-card .btn-detail:hover {
-    background: transparent !important;
-    color: var(--secondary-color) !important;
-    text-decoration: underline !important;
-    box-shadow: none !important;
-    transform: none !important;
+    background: #05122a !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    box-shadow: 0 6px 15px rgba(10, 35, 81, 0.4) !important;
+    transform: translateY(-2px) !important;
 }
 
 .artikel-card .btn-detail:hover i {
